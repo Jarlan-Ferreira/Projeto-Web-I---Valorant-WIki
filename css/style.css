@@ -1,0 +1,179 @@
+/* ===== ESTILOS GLOBAIS ===== */
+/* Background geral da aplicação com degradê preto/vermelho */
+body {
+    /* Requisito: Background personalizado com degradê */
+    background: linear-gradient(135deg, #000000 0%, #8B0000 50%, #FF0000 100%);
+    /* Fonte padrão da aplicação */
+    font-family: 'Arial', sans-serif;
+    /* Garante altura mínima da viewport */
+    min-height: 100vh;
+}
+
+/* ===== ESTILOS DA TELA DE LOGIN ===== */
+/* Requisito 1: Container da tela de login com transparência */
+.login-container {
+    /* Fundo semi-transparente para overlay */
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Requisito 1: DIV centralizado com efeito de transparência e blur */
+.login-box {
+    /* Fundo transparente com efeito glassmorphism */
+    background: rgba(255, 255, 255, 0.1);
+    /* Efeito de desfoque no fundo */
+    backdrop-filter: blur(10px);
+    /* Borda sutil para definir o contorno */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Largura responsiva */
+    width: 100%;
+    /* Largura máxima para não ficar muito largo */
+    max-width: 400px;
+}
+
+/* ===== ESTILOS DOS CARDS DOS AGENTES ===== */
+/* Requisito 8: Cards dos agentes usando Flexbox */
+/* Requisito 5: Estilização para exibir conteúdo da API */
+.agent-card {
+    /* Fundo quase opaco para legibilidade */
+    background: rgba(255, 255, 255, 0.95);
+    /* Bordas arredondadas */
+    border-radius: 10px;
+    /* Transição suave para animações */
+    transition: transform 0.3s ease;
+    /* Cursor pointer para indicar clicabilidade */
+    cursor: pointer;
+    /* Altura mínima para uniformidade */
+    min-height: 350px;
+    /* Flexbox para organização vertical */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Efeito hover nos cards dos agentes */
+.agent-card:hover {
+    /* Animação de elevação ao passar mouse */
+    transform: translateY(-5px);
+}
+
+/* ===== ESTILOS DAS IMAGENS ===== */
+/* Requisito 5: Estilização para imagens da API */
+.agent-image {
+    /* Largura total do container */
+    width: 100%;
+    /* Altura fixa para uniformidade */
+    height: 200px;
+    /* Mantém proporção sem cortar a imagem */
+    object-fit: contain;
+    /* Bordas arredondadas apenas no topo */
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===== ESTILOS DO BOTÃO DE FAVORITOS ===== */
+/* Requisito 6: Botão para favoritar itens */
+.favorite-btn {
+    /* Posicionamento absoluto no canto superior direito */
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* Fundo semi-transparente */
+    background: rgba(255, 255, 255, 0.9);
+    /* Remove borda padrão */
+    border: none;
+    /* Formato circular */
+    border-radius: 50%;
+    /* Dimensões fixas */
+    width: 40px;
+    height: 40px;
+    /* Centralização do ícone usando flexbox */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Requisito 6: Estado visual do item favoritado */
+.favorite-btn.favorited {
+    /* Cor de fundo quando favoritado */
+    background: #ff6b6b;
+    /* Cor do texto/ícone */
+    color: white;
+}
+
+/* ===== ESTILOS DOS CONTAINERS ===== */
+/* Container principal com efeito glassmorphism */
+.container {
+    /* Fundo semi-transparente */
+    background: rgba(255, 255, 255, 0.1);
+    /* Bordas arredondadas */
+    border-radius: 15px;
+    /* Espaçamento interno */
+    padding: 20px;
+    /* Efeito de desfoque no fundo */
+    backdrop-filter: blur(5px);
+}
+
+/* ===== ESTILOS DA PÁGINA DE DETALHES ===== */
+/* Container dos detalhes do agente */
+.agent-details {
+    /* Fundo escuro semi-transparente */
+    background: rgba(0, 0, 0, 0.8);
+    /* Bordas arredondadas */
+    border-radius: 15px;
+    /* Espaçamento interno generoso */
+    padding: 30px;
+    /* Texto branco para contraste */
+    color: white;
+}
+
+/* Imagem splash art na página de detalhes */
+.splash-art {
+    /* Largura total disponível */
+    width: 100%;
+    /* Altura máxima para não ficar muito grande */
+    max-height: 400px;
+    /* Cobre todo o espaço mantendo proporção */
+    object-fit: cover;
+    /* Bordas arredondadas */
+    border-radius: 10px;
+}
+
+/* ===== ESTILOS DOS CARDS DE HABILIDADES ===== */
+/* Cards das habilidades dos agentes */
+.ability-card {
+    /* Fundo semi-transparente */
+    background: rgba(255, 255, 255, 0.1);
+    /* Bordas arredondadas */
+    border-radius: 10px;
+    /* Espaçamento interno */
+    padding: 15px;
+    /* Margem inferior para separação */
+    margin-bottom: 15px;
+    /* Borda sutil */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* Altura mínima para uniformidade */
+    min-height: 180px;
+    /* Flexbox para organização vertical */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Requisito 8: Flexbox para organizar conteúdo do card */
+.card-body {
+    /* Cresce para ocupar espaço disponível */
+    flex-grow: 1;
+    /* Flexbox para organização vertical */
+    display: flex;
+    flex-direction: column;
+    /* Distribui espaço entre elementos */
+    justify-content: space-between;
+}
+
+/* ===== ESTILOS DOS ÍCONES ===== */
+/* Ícones das habilidades */
+.ability-icon {
+    /* Largura fixa */
+    width: 50px;
+    /* Altura fixa */
+    height: 50px;
+    /* Bordas levemente arredondadas */
+    border-radius: 8px;
+}

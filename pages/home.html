@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Wiki - Home</title>
+    <!-- Requisito 9: Bootstrap para responsividade e componentes -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navegação com botão para visualizar favoritos (Requisito 7) -->
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <span class="navbar-brand">Valorant Wiki</span>
+            <!-- Requisito 7: Botão para visualizar todos os itens favoritos -->
+            <button id="favoritesBtn" class="btn btn-outline-light" onclick="showFavorites()">Favoritos</button>
+        </div>
+    </nav>
+
+    <!-- Requisito 9: Container Bootstrap com sistema flexbox -->
+    <div class="container mt-4">
+        <!-- Requisito 3: Sistema de busca em API (Valorant API) -->
+        <div class="row mb-4">
+            <div class="col-md-8 col-lg-6 mx-auto">
+                <div class="text-center mb-3">
+                    <h2 class="text-white">Buscar Agentes</h2>
+                </div>
+                <!-- Requisito 3: Campo de busca que consulta API do Valorant -->
+                <div class="input-group">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Digite o nome do agente..." onkeyup="searchAgents()">
+                    <button class="btn btn-primary" onclick="searchAgents()">Buscar</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Requisito 8: Flexbox para layout dos cards dos agentes -->
+        <!-- Requisito 5: Container para exibir imagens da API -->
+        <div id="agentsContainer" class="row g-3"></div>
+        <!-- Requisito 7: Container para exibir itens favoritos -->
+        <div id="favoritesContainer" class="row g-3" style="display: none;"></div>
+    </div>
+
+    <script src="../js/home.js"></script>
+</body>
+</html>

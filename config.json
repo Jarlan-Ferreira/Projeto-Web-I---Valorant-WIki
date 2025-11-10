@@ -1,0 +1,21 @@
+{
+  "project": {
+    "name": "Valorant Wiki",
+    "version": "1.0.0",
+    "description": "Wiki interativa dos agentes do Valorant"
+  },
+  "paths": {
+    "css": "./css/",
+    "js": "./js/",
+    "pages": "./pages/",
+    "data": "./data/",
+    "images": "./images/"
+  },
+  "features": {
+    "login": true,
+    "search": true,
+    "favorites": true,
+    "agentDetails": true,
+    "responsive": true
+  }
+}
